@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Form Biaya Operasional</title>
+  <script src="input-biaya.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+    }
+    .btn-add {
+      background-color: #007bff;
+      color: white;
+      border: none;
+    }
+    .btn-submit {
+      background-color: #28a745;
+      color: white;
+      border: none;
+    }
+    .input-inline {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .input-inline input {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Input Biaya Operasional</h1>
+
+  <form id="form-biaya">
+    <label for="namaPelapor">Nama Pelapor</label>
+    <input type="text" id="namaPelapor" required />
+
+    <label for="tanggalDokumen">Tanggal Dokumen</label>
+    <input type="date" id="tanggalDokumen" required />
+
+    <label for="tempatDokumen">Tempat Dokumen</label>
+    <input type="text" id="tempatDokumen" required />
+
+    <h3>Input Rincian Biaya</h3>
+    <div class="input-inline">
+      <input type="text" id="inputNamaBiaya" placeholder="Nama Biaya" style="flex: 2;" />
+      <input type="number" id="inputNilaiBiaya" placeholder="Nilai (Rp)" style="flex: 1;" />
+      <button type="button" class="btn-add" onclick="tambahBiayaManual()">+ Tambah ke Tabel</button>
+    </div>
+
+    <h3>Daftar Rincian Biaya</h3>
+    <table id="tabel-biaya">
+      <thead>
+        <tr>
+          <th style="width: 5%;">No</th>
+          <th>Nama Biaya</th>
+          <th style="width: 25%;">Nilai (Rp)</th>
+          <th style="width: 10%;">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="biaya-body">
+        <!-- Baris biaya akan ditambahkan via tombol -->
+      </tbody>
+    </table>
+
+    <label for="namaPengesah">Nama Pengesah</label>
+    <input type="text" id="namaPengesah" required />
+
+    <label for="jabatanPengesah">Jabatan Pengesah</label>
+    <input type="text" id="jabatanPengesah" required />
+
+    <button type="submit" class="btn-submit">Upload ke GitHub</button>
+  </form>
+
+  <p id="status"></p>
+</body>
+</html>
