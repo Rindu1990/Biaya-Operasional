@@ -1,0 +1,14 @@
+{
+  "nama_pelapor": "Windra Kurniawan",
+  "tanggal_dokumen": "2025-07-05",
+  "tempat_dokumen": "Rantau Ikil",
+  "nama_pengesah": "AL MASKUR",
+  "jabatan_pengesah": "DIREKTUR",
+  "rincian_biaya": [
+    {
+      "nama_biaya": "Beli Baju",
+      "nilai": 15000
+    }
+  ],
+  "waktu_input": "2025-07-05T02:30:02.774Z"
+}
